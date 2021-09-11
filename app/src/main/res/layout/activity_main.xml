@@ -18,7 +18,7 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{calculator.sum}"
@@ -29,7 +29,7 @@
             app:layout_constraintVertical_bias="0.71" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/et_input"
             android:layout_width="335dp"
             android:layout_height="64dp"
             android:layout_marginTop="124dp"
@@ -43,7 +43,7 @@
             tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_add"
