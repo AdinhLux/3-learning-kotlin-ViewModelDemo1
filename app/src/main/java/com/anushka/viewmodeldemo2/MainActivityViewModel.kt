@@ -15,6 +15,7 @@ class MainActivityViewModel : ViewModel() {
     }
 
     fun getModifiedSum(value: Int): Int {
-        return sum + value
+        sum += value
+        return sum
     }
 }

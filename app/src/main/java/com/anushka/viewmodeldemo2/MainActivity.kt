@@ -18,10 +18,20 @@ class MainActivity : AppCompatActivity() {
         binding.tvResult.text = viewModel.getCurrentSum().toString()
 
         binding.btnAdd.setOnClickListener {
-            if (binding.etInput.text.toString().isNotBlank())
-                binding.tvResult.text =
-                    viewModel.getModifiedSum(Integer.valueOf(binding.etInput.text.toString()))
-                        .toString()
+
+            // To avoid repeating 'binding' word
+            binding.apply {
+                if (etInput.text.toString().isNotBlank()) {
+
+                    // Update TextView
+                    tvResult.text =
+                        viewModel.getModifiedSum(Integer.valueOf(etInput.text.toString()))
+                            .toString()
+
+                    // Clear EditText
+                    etInput.text.clear()
+                }
+            }
         }
     }
 }
